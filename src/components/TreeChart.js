@@ -18,11 +18,12 @@ const TreeChart = () => {
   };
 
   // Let's say we had a requirement to choose from the last 3 years in the year filter...
-  const yearsFromNowMinusFive = Array.from(
+  const yearsFromNowMinusThree = Array.from(
     { length: 3 },
     (v, k) => k + new Date().getFullYear() - 2
   );
-  const [selectedYear, setSelectedYear] = useState(yearsFromNowMinusFive[0]);
+  // Let's use the first year for the first fetch...
+  const [selectedYear, setSelectedYear] = useState(yearsFromNowMinusThree[0]);
 
   // Set the chart data in state so it can be updated...
   const [treeData, setTreeData] = useState(initTreeChartState);
@@ -60,8 +61,8 @@ const TreeChart = () => {
     <div>
       <label htmlFor="year">Choose a year:</label>
       <select id="year" onChange={handleYearChange}>
-        {yearsFromNowMinusFive.map((yearToChoose) => {
-          return <option label={yearToChoose}>{yearToChoose}</option>;
+        {yearsFromNowMinusThree.map((yearToChoose) => {
+          return <option key={ yearToChoose } label={yearToChoose}>{yearToChoose}</option>;
         })}
       </select>
       <Bar
