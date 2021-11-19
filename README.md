@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 It will show you some nice stats about tree planting requests, which you can filter by year! :)
 
+## Before you begin
+
+Please run `npm install` to install all required dependencies.
+
 ## Available Scripts
 
 In the project directory, you can run:
