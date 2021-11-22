@@ -6,15 +6,7 @@ const TreeChart = () => {
   // Initial state for our chart...
   const initTreeChartState = {
     labels: [],
-    datasets: [
-      {
-        label: "Trees Planted",
-        backgroundColor: "rgba(75,192,192,1)",
-        borderColor: "rgba(0,0,0,1)",
-        borderWidth: 2,
-        data: [],
-      },
-    ],
+    datasets: [],
   };
 
   // Let's say we had a requirement to choose from the last 3 years in the year filter...
